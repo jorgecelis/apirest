@@ -4,7 +4,7 @@
   "description": "",
   "main": "index.js",
   "scripts": {
-    "start": "./server/bin/www",
+    "start": "node server/bin/www",
     "test": "jest --coverage",
     "dev": "nodemon ./server/bin/www"
   },
