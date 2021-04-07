@@ -39,7 +39,7 @@ class UserService {
       correo: req.body.correo,
       telefono: req.body.telefono,
     });
-    
+
     return users;
   }
 

@@ -2,9 +2,12 @@ const express = require("express");
 const morgan = require("morgan");
 const router = require("./routes");
 const helmet = require("helmet");
+const cors = require("cors");
 
 /** Instancia del servicio. */
 const app = express();
+app.use(cors());
+
 app.use((req, res, next) => {
   next();
 });
