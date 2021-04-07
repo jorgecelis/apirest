@@ -24,7 +24,7 @@ class UserService {
     let users = await Users.create(req.body);
     return users;
   }
-
+//asdad
   //Find one user by id
   static async getById(req) {
     let users = await Users.findById(req.params.id);
