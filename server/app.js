@@ -3,6 +3,10 @@ const morgan = require("morgan");
 const router = require("./routes");
 const helmet = require("helmet");
 const cors = require('cors'); 
+/** Instancia del servicio. */
+const app = express();
+
+const cors = require("cors");
 
 /** Instancia del servicio. */
 const app = express();
