@@ -3,10 +3,10 @@ let Schema = mongoose.Schema;
 
 const userSchema = new Schema(
   {
-    uid: { type: mongoose.Types.ObjectId},
+    uid: { type: mongoose.Types.ObjectId, auto: true },
     email: { type: String },
     displayName: { type: String },
-//  photoURL: { type: format },
+    //  photoURL: { type: format },
     emailVerified: { type: String },
   },
   { versionKey: "myVersionKey" }
