@@ -35,9 +35,11 @@ class UserService {
   //Update user
   static async update(req) {
     let users = await Users.findByIdAndUpdate(req.params.id, {
-      nombre: req.body.nombre,
-      correo: req.body.correo,
-      telefono: req.body.telefono,
+      displayName: req.body.displayName,
+      email: req.body.email,
+      emailVerified: req.body.emailVerified,
+      uid: req.body.uid,
+//  photoURL: { type: format },
     });
 
     return users;
