@@ -39,7 +39,7 @@ class UserService {
       email: req.body.email,
       emailVerified: req.body.emailVerified,
       uid: req.body.uid,
-//  photoURL: { type: format },
+  //  photoURL: { type: format }, 
     });
 
     return users;
