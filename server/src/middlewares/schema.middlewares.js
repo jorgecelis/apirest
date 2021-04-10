@@ -3,13 +3,12 @@ let Schema = mongoose.Schema;
 
 const userSchema = new Schema(
   {
-    uid: { type: mongoose.Types.ObjectId, auto: true },
+    uid: { type: mongoose.Types.ObjectId },
     email: { type: String },
     displayName: { type: String },
     //  photoURL: { type: format },
-    emailVerified: { type: String },
-  },
-  { versionKey: "myVersionKey" }
+    emailVerified: { type: Boolean },
+  }
 );
 
 const userModel = mongoose.model("Users", userSchema);

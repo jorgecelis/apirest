@@ -38,9 +38,8 @@ class UserService {
       email: req.body.email,
       emailVerified: req.body.emailVerified,
       uid: req.body.uid,
-  //  photoURL: { type: format }, 
-
-});
+      //  photoURL: { type: format },
+    });
 
     return users;
   }
@@ -49,6 +48,16 @@ class UserService {
   static async delete(req) {
     await Users.findByIdAndDelete(req.params.id);
     return "usuario eliminado";
+  }
+
+  //Find mail
+  static async getMail(req) {
+    console.log("estoy en el service", req.params);
+
+    
+    let users = await Users.find({ email: { $in: req.params.email } });
+    console.log("usuario mail", users);
+    return users;
   }
 }
 

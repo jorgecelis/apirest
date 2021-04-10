@@ -12,6 +12,9 @@ router.post("/usuarios", UserController.save);
 //find one user by id
 router.get("/usuarios/:id", UserController.getById);
 
+//find one user by id
+router.get("/email/:email", UserController.getMail);
+
 //Put user by id
 router.put("/usuarios/:id", UserController.update);
 
