@@ -1,22 +1,14 @@
-const user = {
-
-    body: {
-        type: 'object',
-        properties: {
-            nombre: {
-                type: 'string',
-                required: true,
-            },
-            correo: {
-                type: 'string',
-                required: true,
-            },
-            telefono: {
-                type: 'number',
-                required: true,
-            },
-        },
+const email = {
+  params: {
+    type: "object",
+    properties: {
+      email: {
+        type: "string",
+        required: true,
+        pattern: "[a-zA-Z0-9_\\.\\+-]+@[a-zA-Z0-9-]+\\.[a-zA-Z0-9-\\.]+",
+      },
     },
+  },
 };
 
-export default { user };
+module.exports = { email };

@@ -8,6 +8,7 @@ const userSchema = new Schema(
     displayName: { type: String },
     //  photoURL: { type: format },
     emailVerified: { type: Boolean },
+    admin: false,
   }
 );
 

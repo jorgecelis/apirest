@@ -34,8 +34,8 @@ class UserController {
     const { data, code } = await UserLogic.delete(req);
     res.status(code).send(data);
   }
-  static async getMail(req, res){
-    const {data, code} = await UserLogic.getMail(req);
+  static async getMail(req, res) {
+    const { data, code } = await UserLogic.getMail(req);
     res.status(code).send(data);
   }
 }

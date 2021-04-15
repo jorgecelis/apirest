@@ -60,7 +60,6 @@ class UserLogic {
 
     try {
       data = await UserService.update(req);
-      
     } catch (err) {
       data = err;
       code = 500;
@@ -82,21 +81,18 @@ class UserLogic {
     return { code, data };
   }
 
-  static async getMail(req){
+  static async getMail(req) {
     let code = 200;
     let data;
 
     try {
-      data = await UserService.getMail(req);
+      [data] = await UserService.getMail(req);
     } catch (err) {
       data = err;
       code = 500;
     }
     return { code, data };
   }
-
-
-
 }
 
 module.exports = UserLogic;

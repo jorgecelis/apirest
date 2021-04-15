@@ -1,4 +1,4 @@
-const Users = require("../middlewares/schema.middlewares");
+const Users = require("../models/schema.user");
 
 /**
  * Entidad para el manejo de servicios.
@@ -11,6 +11,7 @@ class UserService {
    */
 
   //Find and show all users
+  //
   static async getAll(req) {
     // console.log(req.params);
     // console.log(req.query);
@@ -52,11 +53,10 @@ class UserService {
 
   //Find mail
   static async getMail(req) {
-    console.log("estoy en el service", req.params);
+    // console.log("estoy en el service", req.params);
 
-    
     let users = await Users.find({ email: { $in: req.params.email } });
-    console.log("usuario mail", users);
+    // console.log("usuario mail", users);
     return users;
   }
 }
